@@ -2,11 +2,16 @@ package com.example.c0768448_w2020_mad3125_fp.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -24,7 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText _passwordText;
     @InjectView(R.id.btnLogin)
     Button _loginButton;
-
+    private SharedPreferences loginPrefer;
+    private SharedPreferences.Editor loginEditorPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +38,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().setTitle("Login");
         ButterKnife.inject(this);
-
-        _loginButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                login();
-            }
-        });
     }
+
+
+
+
 
 
 }
