@@ -3,7 +3,20 @@ package Model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.HashMap;
+
 public class Customer implements Parcelable {
+
+    private String custId;
+    private String firstName;
+    private String lastName;
+    private String gender;
+    private String dateOfBirth;
+    private HashMap<String, Bill> bills = new HashMap<String, Bill>();
+    private Double totalBill;
+
+
+
     protected Customer(Parcel in) {
     }
 
