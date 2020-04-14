@@ -134,5 +134,14 @@ public class Customer implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.custId);
+        dest.writeString(this.firstName);
+        dest.writeString(this.lastName);
+        dest.writeString(this.fullName);
+        dest.writeString(this.emailID);
+        dest.writeString(this.gender);
+        dest.writeString(this.dateOfBirth);
+        dest.writeMap(this.bills);
+        dest.writeValue(this.totalBill);
     }
 }
