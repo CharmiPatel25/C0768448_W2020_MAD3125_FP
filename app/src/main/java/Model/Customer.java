@@ -3,6 +3,8 @@ package Model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class Customer implements Parcelable {
@@ -143,5 +145,22 @@ public class Customer implements Parcelable {
         dest.writeString(this.dateOfBirth);
         dest.writeMap(this.bills);
         dest.writeValue(this.totalBill);
+    }
+
+    public ArrayList<Bill> getAllBills()
+    {
+        Collection<Bill> billData = bills.values();
+        ArrayList<Bill> billsList = new ArrayList<>(billData);
+        return billsList;
+    }
+
+    public double getTotalAmount()
+    {
+        double totalBilltoPay = 0.0d;
+        for (Bill b : bills.values())
+        {
+            totalBilltoPay += b.billAmount;
+        }
+        return totalBilltoPay;
     }
 }
