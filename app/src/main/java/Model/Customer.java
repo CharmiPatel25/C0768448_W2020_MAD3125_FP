@@ -4,10 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.HashMap;
-enum  Gender
-{
-    Male,Female,Others
-}
+
 public class Customer implements Parcelable {
 
     private String custId;
@@ -15,12 +12,12 @@ public class Customer implements Parcelable {
     private String lastName;
     private String fullName;
     private String emailID;
-    private Gender gender;
+    private String gender;
     private String dateOfBirth;
     private HashMap<String, Bill> bills = new HashMap<String, Bill>();
     private Double totalBill;
 
-    public Customer(String customerID, String firstName, String lastName, String emailID,Gender gender,String dob) {
+    public Customer(String customerID, String firstName, String lastName, String emailID,String gender,String dob) {
         this.custId = customerID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -69,11 +66,11 @@ public class Customer implements Parcelable {
         this.emailID = emailID;
     }
 
-    public Gender getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Gender gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -106,6 +103,15 @@ public class Customer implements Parcelable {
     }
 
     protected Customer(Parcel in) {
+        this.custId = in.readString();
+        this.firstName = in.readString();
+        this.lastName = in.readString();
+        this.fullName = in.readString();
+        this.gender = in.readString();
+        this.dateOfBirth = in.readString();
+        this.emailID = in.readString();
+        this.bills = in.readHashMap(Bill.class.getClassLoader());
+        this.totalBill = (Double) in.readValue(Double.class.getClassLoader());
 
     }
 
