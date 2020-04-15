@@ -9,6 +9,8 @@ import java.util.HashMap;
 import Model.Bill;
 import Model.Customer;
 import Model.Hydro;
+import Model.Internet;
+import Model.Mobile;
 
 public class DataStorage {
     private static DataStorage dataObj = new DataStorage();
@@ -46,6 +48,22 @@ public class DataStorage {
         Hydro h1 = new Hydro("HD001",formatter1.parse("12/03/2019"), Bill.BillType.Hydro,"Tata",45);
         Hydro h2 = new Hydro("HD002",formatter1.parse("25/02/2019"), Bill.BillType.Hydro,"Reliance",20);
 
+        Internet i1 = new Internet("IN001", formatter1.parse("01/12/2018"), Bill.BillType.Internet,"Lucky",4.0);
+        Internet i2 = new Internet("IN002", formatter1.parse("17/11/2017"), Bill.BillType.Internet,"Bell",5.0);
 
+        Mobile m1 = new Mobile("MB001",formatter1.parse("03/05/2018"), Bill.BillType.Mobile,"OnePlus","Unlimited 5G","6573482395",2,60);
+
+        Mobile m2 = new Mobile("MB002",formatter1.parse("20/05/2015"), Bill.BillType.Mobile,"Apple Inc","Unlimited 5G+Talktime","8673492746",4,120);
+
+        c1.addBill(h1,h1.getBillID());
+        c1.addBill(i1,i1.getBillID());
+        c1.addBill(m1,m1.getBillID());
+
+        c2.addBill(h2,h2.getBillID());
+        c2.addBill(m2,m2.getBillID());
+
+        c3.addBill(i2,i2.getBillID());
     }
+
+
 }
