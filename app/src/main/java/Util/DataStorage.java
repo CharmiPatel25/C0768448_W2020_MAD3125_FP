@@ -43,7 +43,7 @@ public class DataStorage {
         Customer c5 = new Customer("C005","Bran","Stark","bran@gmail.com","Male","19/02/1998",R.drawable.dollar);
 
         customers.put(c1.getCustId(),c1);
-       customers.put(c2.getCustId(),c2);
+        customers.put(c2.getCustId(),c2);
         customers.put(c3.getCustId(),c3);
         customers.put(c4.getCustId(),c4);
         customers.put(c5.getCustId(),c5);

@@ -30,6 +30,7 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
     public CustomerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.customer_item, parent, false);
         CustomerViewHolder mCustomerViewHolder = new CustomerViewHolder(mView);
+
         return mCustomerViewHolder;
     }
 

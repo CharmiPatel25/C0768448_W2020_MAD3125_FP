@@ -1,6 +1,7 @@
 package com.example.c0768448_w2020_mad3125_fp.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +17,8 @@ import java.util.HashMap;
 import Adapter.CustomerListAdapter;
 import Model.Customer;
 import Util.DataStorage;
+
+import static java.security.AccessController.getContext;
 
 public class CustomerListActivity extends AppCompatActivity {
     private RecyclerView rvCustomers;
