@@ -1,10 +1,12 @@
 package com.example.c0768448_w2020_mad3125_fp.UI;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,5 +45,27 @@ public class CustomerListActivity extends AppCompatActivity {
         rvCustomers.setAdapter(custAdapter);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
 
+        getMenuInflater().inflate(R.menu.customerlist_menu,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.btnAddCustomer:
+                Intent mIntent = new Intent(CustomerListActivity.this, AddNewCustomerActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btnLogout:
+                Intent mLogout = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(mLogout);
+                finish();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
