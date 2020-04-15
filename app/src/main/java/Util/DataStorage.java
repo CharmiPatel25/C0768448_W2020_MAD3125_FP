@@ -33,6 +33,10 @@ public class DataStorage {
         Customer c4 = new Customer("C004","Jon","Snow","jon@gmail.com","Male","10/03/1989");
         Customer c5 = new Customer("C005","Bran","Stark","bran@gmail.com","Male","19/02/1998");
 
-
+       customers.put(c1.getCustId(),c1);
+        customers.put(c2.getCustId(),c2);
+        customers.put(c3.getCustId(),c3);
+        customers.put(c4.getCustId(),c4);
+        customers.put(c5.getCustId(),c5);
     }
 }
