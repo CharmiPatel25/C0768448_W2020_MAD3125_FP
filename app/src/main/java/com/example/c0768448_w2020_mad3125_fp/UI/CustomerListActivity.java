@@ -28,6 +28,7 @@ public class CustomerListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().setTitle("Customers");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_list);
         DataStorage dataStorage = DataStorage.getInstance();
