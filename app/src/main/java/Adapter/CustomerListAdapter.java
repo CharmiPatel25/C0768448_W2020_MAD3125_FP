@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.c0768448_w2020_mad3125_fp.R;
-import com.example.c0768448_w2020_mad3125_fp.ShowBillsActivity;
+import com.example.c0768448_w2020_mad3125_fp.UI.ShowBillsActivity;
 
 import java.util.ArrayList;
 

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowBillsActivity"></activity>
+        <activity android:name=".UI.ShowBillsActivity"></activity>
         <activity android:name=".UI.CustomerListActivity" />
         <activity android:name=".UI.LoginActivity" />
         <activity android:name=".UI.SplashScreenActivity">
