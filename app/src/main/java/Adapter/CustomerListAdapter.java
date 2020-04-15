@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -40,6 +41,7 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
         holder.txtEmail.setText(mCustomer.getEmailID());
         holder.txtDob.setText(mCustomer.getDateOfBirth());
         holder.txtGender.setText(mCustomer.getGender());
+        holder.imgUser.setImageResource(mCustomer.getCustIcon());
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +62,7 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
 
     public class CustomerViewHolder extends RecyclerView.ViewHolder {
         TextView  txtFullName, txtCustID,txtEmail,txtDob,txtGender;
+        ImageView imgUser;
 
         public CustomerViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -68,6 +71,7 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
             this.txtEmail = itemView.findViewById(R.id.txtCustEmail);
             this.txtGender = itemView.findViewById(R.id.txtCustGender);
             this.txtDob = itemView.findViewById(R.id.txt_customer_dob);
+            this.imgUser = itemView.findViewById(R.id.imgUser);
         }
     }
 }

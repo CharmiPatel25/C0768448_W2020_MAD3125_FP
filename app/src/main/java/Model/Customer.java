@@ -18,14 +18,24 @@ public class Customer implements Parcelable {
     private String dateOfBirth;
     private HashMap<String, Bill> bills = new HashMap<String, Bill>();
     private Double totalBill;
+    private int custIcon;
 
-    public Customer(String customerID, String firstName, String lastName, String emailID,String gender,String dob) {
+    public Customer(String customerID, String firstName, String lastName, String emailID,String gender,String dob,int custIcon) {
         this.custId = customerID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailID = emailID;
         this.gender = gender;
         this.dateOfBirth = dob;
+        this.custIcon = custIcon;
+    }
+
+    public int getCustIcon() {
+        return custIcon;
+    }
+
+    public void setCustIcon(int custIcon) {
+        this.custIcon = custIcon;
     }
 
     public String getCustId() {
@@ -114,6 +124,7 @@ public class Customer implements Parcelable {
         this.emailID = in.readString();
         this.bills = in.readHashMap(Bill.class.getClassLoader());
         this.totalBill = (Double) in.readValue(Double.class.getClassLoader());
+        custIcon = in.readInt();
 
     }
 
@@ -164,11 +175,11 @@ public class Customer implements Parcelable {
         return totalBilltoPay;
     }
 
-    public void addBill(Bill bill, String billId)
+   /* public void addBill(Bill bill, String billId)
     {
         bills.put(billId, bill);
         this.totalBill = this.totalBill + bill.billAmount;
-    }
+    }*/
 
     public void removeBill(Bill bill, String billID)
     {
