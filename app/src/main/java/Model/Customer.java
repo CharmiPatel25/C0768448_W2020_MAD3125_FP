@@ -163,4 +163,15 @@ public class Customer implements Parcelable {
         }
         return totalBilltoPay;
     }
+
+    public void addBill(Bill bill, String billId)
+    {
+        bills.put(billId, bill);
+        this.totalBill = this.totalBill + bill.billAmount;
+    }
+
+    public void removeBill(Bill bill, String billID)
+    {
+        bills.remove(billID);
+    }
 }
