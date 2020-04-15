@@ -49,7 +49,7 @@ public class DataStorage {
         customers.put(c5.getCustId(),c5);
 
 
-       /* Hydro h1 = new Hydro("HD001",formatter1.parse("12/03/2019"), Bill.BillType.Hydro,"Tata",45);
+      /* Hydro h1 = new Hydro("HD001",formatter1.parse("12/03/2019"), Bill.BillType.Hydro,"Tata",45);
         Hydro h2 = new Hydro("HD002",formatter1.parse("25/02/2019"), Bill.BillType.Hydro,"Reliance",20);
 
         Internet i1 = new Internet("IN001", formatter1.parse("01/12/2018"), Bill.BillType.Internet,"Lucky",4.0);

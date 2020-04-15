@@ -165,7 +165,7 @@ public class Customer implements Parcelable {
         return billsList;
     }
 
-    public double getTotalAmount()
+   /* public double getTotalAmount()
     {
         double totalBilltoPay = 0.0d;
         for (Bill b : bills.values())
@@ -173,13 +173,13 @@ public class Customer implements Parcelable {
             totalBilltoPay += b.billAmount;
         }
         return totalBilltoPay;
-    }
+    }*/
 
-   /* public void addBill(Bill bill, String billId)
+    public void addBill(Bill bill, String billId)
     {
         bills.put(billId, bill);
         this.totalBill = this.totalBill + bill.billAmount;
-    }*/
+    }
 
     public void removeBill(Bill bill, String billID)
     {

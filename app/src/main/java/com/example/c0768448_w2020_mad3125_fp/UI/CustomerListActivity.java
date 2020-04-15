@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.example.c0768448_w2020_mad3125_fp.R;
 
@@ -34,21 +36,12 @@ public class CustomerListActivity extends AppCompatActivity {
         DataStorage dataStorage = DataStorage.getInstance();
         dataStorage.loadData();
         customers = dataStorage.getAllCustomers();
-
         rvCustomers = findViewById(R.id.rvCustomerList);
         custAdapter = new CustomerListAdapter(customers);
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvCustomers.setLayoutManager(mLinearLayoutManager);
-
         rvCustomers.setAdapter(custAdapter);
     }
 
-    private void loadCustomers() throws ParseException {
-        DataStorage.getInstance().loadData();
-        customers = new ArrayList();
-        HashMap<String, Customer> customerHashMap = DataStorage.getInstance().getAllCustomerHash();
-        Collection<Customer> demoValues = customerHashMap.values();
-        customerArrayList = new ArrayList<>(demoValues);
-        customers.addAll(customerArrayList);
-    }
+
 }
