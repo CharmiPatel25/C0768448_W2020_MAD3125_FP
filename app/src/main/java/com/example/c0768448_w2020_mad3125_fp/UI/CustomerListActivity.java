@@ -27,16 +27,15 @@ public class CustomerListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_list);
-        rvCustomers =findViewById(R.id.rvCustomerList);
-        try {
-            loadCustomers();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        DataStorage dataStorage = DataStorage.getInstance();
+        dataStorage.loadData();
+        customers = dataStorage.getAllCustomers();
 
+        rvCustomers = findViewById(R.id.rvCustomerList);
         custAdapter = new CustomerListAdapter(customers);
         RecyclerView.LayoutManager mLinearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvCustomers.setLayoutManager(mLinearLayoutManager);
+
         rvCustomers.setAdapter(custAdapter);
     }
 
@@ -47,6 +46,5 @@ public class CustomerListActivity extends AppCompatActivity {
         Collection<Customer> demoValues = customerHashMap.values();
         customerArrayList = new ArrayList<>(demoValues);
         customers.addAll(customerArrayList);
-
     }
 }
