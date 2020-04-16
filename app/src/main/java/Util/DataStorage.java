@@ -32,13 +32,17 @@ public class DataStorage {
         Collection<Customer> tempCustomerList = customers.values();
         return new ArrayList<>(tempCustomerList);
     }
+    public void addCustomer(Customer customer)
+    {
+        this.customers.put(customer.getCustId(), customer);
+    }
 
     public void loadData()  {
         SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");
 
         Customer c1 = new Customer("C001","Charmi","Patel","charmi@gmail.com","Female","25/11/1993", R.drawable.user);
-        Customer c2 = new Customer("C002","Avani","Patel","avani@gmail.com","Female","5/01/1996",R.drawable.user);
-        Customer c3 = new Customer("C003","Jyothi","Thomas","jyothi@gmail.com","Female","24/10/1991",R.drawable.user);
+        Customer c2 = new Customer("C002","Danerys","Targergyn","danny@gmail.com","Female","5/01/1996",R.drawable.user);
+        Customer c3 = new Customer("C003","Cersi","Lannister","cersi@gmail.com","Female","24/10/1991",R.drawable.user);
         Customer c4 = new Customer("C004","Jon","Snow","jon@gmail.com","Male","10/03/1989",R.drawable.user);
         Customer c5 = new Customer("C005","Bran","Stark","bran@gmail.com","Male","19/02/1998",R.drawable.user);
 

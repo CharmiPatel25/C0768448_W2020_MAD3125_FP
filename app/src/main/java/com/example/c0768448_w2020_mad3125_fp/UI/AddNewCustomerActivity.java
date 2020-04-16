@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -18,6 +19,9 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Calendar;
+
+import Model.Customer;
+import Util.DataStorage;
 
 public class AddNewCustomerActivity extends AppCompatActivity {
     private TextInputLayout lblCustID, lblFirstName, lblLastName, lblBirthDate, lblEmailID;
@@ -55,6 +59,7 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                addCustomer();
             }
         });
 
@@ -67,6 +72,49 @@ public class AddNewCustomerActivity extends AppCompatActivity {
 
         addDatePicker();
     }
+
+    private void addCustomer() {
+        if(edtTxtCustID.getText().toString().isEmpty() && edtTxtFirstName.getText().toString().isEmpty() && edtTxtLastName.getText().toString().isEmpty() && edtTxtBirthDate.getText().toString().isEmpty()&& edtTxtEmailID.getText().toString().isEmpty())
+        {
+            edtTxtCustID.setError("Please Enter Customer ID");
+            edtTxtFirstName.setError("Please Enter First Name");
+            edtTxtLastName.setError("Please Enter Last Name");
+            edtTxtBirthDate.setError("Please Enter Birth Date");
+            edtTxtEmailID.setError("Please Enter Email ID");
+        }
+        else if (edtTxtCustID.getText().toString().isEmpty())
+        {
+            edtTxtCustID.setError("Please Enter Customer ID");
+        }
+        else if(edtTxtFirstName.getText().toString().isEmpty())
+        {
+            edtTxtFirstName.setError("Please Enter First Name");
+        }
+        else if (edtTxtLastName.getText().toString().isEmpty())
+        {
+            edtTxtLastName.setError("Please Enter Last Name");
+        }
+        else if(edtTxtBirthDate.getText().toString().isEmpty())
+        {
+            edtTxtBirthDate.setError("Please Enter Birth Date");
+        }
+        else if(edtTxtEmailID.getText().toString().isEmpty())
+        {
+            edtTxtEmailID.setError("Please Enter Email ID");
+        }
+        else
+        {
+            Customer newCustomer = new Customer(edtTxtCustID.getText().toString(), edtTxtFirstName.getText().toString(), edtTxtLastName.getText().toString(),edtTxtEmailID.getText().toString(), edtTxtBirthDate.getText().toString(),getGender(),R.drawable.user);
+            DataStorage.getInstance().addCustomer(newCustomer);
+            Intent mIntent = new Intent(AddNewCustomerActivity.this, CustomerListActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("newCustomer", newCustomer);
+            mIntent.putExtras(bundle);
+            startActivity(mIntent);
+        }
+    }
+
+
 
     public String getGender()
     {
