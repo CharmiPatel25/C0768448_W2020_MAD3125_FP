@@ -169,4 +169,16 @@ public class AddNewCustomerActivity extends AppCompatActivity {
             }
         };
     }
+
+    public void clearAll()
+    {
+        edtTxtCustID.getText().clear();
+        edtTxtFirstName.getText().clear();
+        edtTxtLastName.getText().clear();
+        edtTxtBirthDate.getText().clear();
+        edtTxtEmailID.getText().clear();
+        rdBMale.setChecked(false);
+        rdFemale.setChecked(false);
+        rdOther.setChecked(false);
+    }
 }
