@@ -11,25 +11,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Activity.AddNewCustomerActivity">
+
         <TextView
             android:id="@+id/lblHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="102dp"
-            android:layout_marginTop="63dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="102dp"
             android:layout_marginBottom="891dp"
             android:text="Add New Customer"
-            android:textStyle="bold"
             android:textColor="#000000"
             android:textColorHighlight="#00FFFFFF"
             android:textColorHint="#00FFFFFF"
             android:textColorLink="#00FFFFFF"
             android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.333" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/lblFirstName"
@@ -216,5 +218,74 @@
                 app:layout_constraintEnd_toStartOf="@+id/rdFemale"/>
         </RadioGroup>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lblEmailID"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="580dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="414dp"
+            android:ems="10"
+            android:inputType="none"
+            android:textColorHint="#000000"
+            app:boxStrokeWidth="4dp"
+            app:errorEnabled="false"
+            app:hintTextColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTxtEmailID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="Enter Email ID"
+                android:textStyle="bold"
+                android:textColor="#050000"
+                android:textColorHint="#050000"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnAddCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="238dp"
+            android:layout_marginBottom="74dp"
+            android:background="#4CAF50"
+            android:text="ADD"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblEmailID"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginBottom="73dp"
+            android:background="#4CAF50"
+            android:text="CLEAR"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.878"
+            app:layout_constraintStart_toEndOf="@+id/btnAddCustomer"
+            app:layout_constraintTop_toBottomOf="@+id/lblEmailID"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
