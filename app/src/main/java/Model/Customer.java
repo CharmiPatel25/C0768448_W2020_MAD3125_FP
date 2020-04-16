@@ -177,8 +177,7 @@ public class Customer implements Parcelable {
 
     public void addBill(Bill bill, String billId)
     {
-        bills.put(billId, bill);
-        this.totalBill = this.totalBill + bill.billAmount;
+        this.bills.put(billId, bill);
     }
 
     public void removeBill(Bill bill, String billID)
