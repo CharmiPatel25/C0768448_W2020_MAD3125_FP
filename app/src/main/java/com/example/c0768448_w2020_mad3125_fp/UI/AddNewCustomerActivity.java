@@ -60,4 +60,20 @@ public class AddNewCustomerActivity extends AppCompatActivity {
             }
         });
     }
+
+    public String getGender()
+    {
+        if (rdBMale.isChecked()){
+            return "Male";
+        }
+        else if (rdFemale.isChecked()) {
+            return "Female";
+        }
+        else if(rdOther.isChecked())
+        {
+            return "Other";
+        }
+        return null;
+    }
+
 }
