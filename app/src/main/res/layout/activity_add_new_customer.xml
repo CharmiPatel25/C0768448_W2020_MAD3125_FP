@@ -78,6 +78,38 @@
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lblCustId"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="781dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColorHint="#000000"
+            app:boxStrokeWidth="4dp"
+            app:errorEnabled="false"
+            app:hintTextColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTxtCustID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="Customer ID"
+                android:textStyle="bold"
+                android:textColor="#050000"
+                android:textColorHint="#050000"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
