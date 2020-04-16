@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.c0768448_w2020_mad3125_fp.R;
 import com.google.android.material.textfield.TextInputEditText;
@@ -74,14 +75,19 @@ public class AddNewCustomerActivity extends AppCompatActivity {
     }
 
     private void addCustomer() {
-        if(edtTxtCustID.getText().toString().isEmpty() && edtTxtFirstName.getText().toString().isEmpty() && edtTxtLastName.getText().toString().isEmpty() && edtTxtBirthDate.getText().toString().isEmpty()&& edtTxtEmailID.getText().toString().isEmpty())
+        if(edtTxtCustID.getText().toString().isEmpty() && edtTxtFirstName.getText().toString().isEmpty() && edtTxtLastName.getText().toString().isEmpty() && edtTxtBirthDate.getText().toString().isEmpty()&& edtTxtEmailID.getText().toString().isEmpty()&&rdGender.getCheckedRadioButtonId()==-1)
         {
-            edtTxtCustID.setError("Please Enter Customer ID");
-            edtTxtFirstName.setError("Please Enter First Name");
-            edtTxtLastName.setError("Please Enter Last Name");
-            edtTxtBirthDate.setError("Please Enter Birth Date");
-            edtTxtEmailID.setError("Please Enter Email ID");
+          rdOther.setError("Please select Gender");
+
+               // Toast.makeText(getApplicationContext(), "Please select Gender", Toast.LENGTH_SHORT).show();
+
+            lblCustID.setError("Please Enter Customer ID");
+            lblFirstName.setError("Please Enter First Name");
+            lblLastName.setError("Please Enter Last Name");
+            lblBirthDate.setError("Please Enter Birth Date");
+            lblEmailID.setError("Please Enter Email ID");
         }
+
         else if (edtTxtCustID.getText().toString().isEmpty())
         {
             edtTxtCustID.setError("Please Enter Customer ID");
