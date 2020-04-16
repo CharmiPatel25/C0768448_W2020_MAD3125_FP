@@ -4,15 +4,20 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.c0768448_w2020_mad3125_fp.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Calendar;
 
 public class AddNewCustomerActivity extends AppCompatActivity {
     private TextInputLayout lblCustID, lblFirstName, lblLastName, lblBirthDate, lblEmailID;
@@ -59,6 +64,8 @@ public class AddNewCustomerActivity extends AppCompatActivity {
 
             }
         });
+
+        addDatePicker();
     }
 
     public String getGender()
@@ -76,4 +83,36 @@ public class AddNewCustomerActivity extends AppCompatActivity {
         return null;
     }
 
+    private void addDatePicker() {
+        edtTxtBirthDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar calendar = Calendar.getInstance();
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(
+                        AddNewCustomerActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        mDateSetListener,
+                        year, month, day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                String date = "";
+                month = month + 1;
+                if (day < 10) {
+                    date = "0" + day + "/" + month + "/" + year;
+                } else {
+                    date = day + "/" + month + "/" + year;
+                }
+                edtTxtBirthDate.setText(date);
+            }
+        };
+    }
 }
