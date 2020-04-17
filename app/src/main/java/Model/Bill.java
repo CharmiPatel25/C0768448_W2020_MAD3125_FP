@@ -1,8 +1,9 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public abstract class  Bill {
+public abstract class  Bill implements Serializable {
 public enum BillType{
     Hydro,Internet,Mobile
 }

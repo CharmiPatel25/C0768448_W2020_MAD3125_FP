@@ -36,7 +36,11 @@ public class CustomerListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_list);
         DataStorage dataStorage = DataStorage.getInstance();
-        dataStorage.loadData();
+        try {
+            dataStorage.loadData();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         customers = dataStorage.getAllCustomers();
         rvCustomers = findViewById(R.id.rvCustomerList);
         custAdapter = new CustomerListAdapter(customers);

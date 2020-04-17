@@ -155,7 +155,12 @@ public class Customer implements Parcelable {
         dest.writeString(this.gender);
         dest.writeString(this.dateOfBirth);
         dest.writeMap(this.bills);
-        dest.writeValue(this.totalBill);
+        if (totalBill == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(totalBill);
+        }
     }
 
     public ArrayList<Bill> getAllBills()
