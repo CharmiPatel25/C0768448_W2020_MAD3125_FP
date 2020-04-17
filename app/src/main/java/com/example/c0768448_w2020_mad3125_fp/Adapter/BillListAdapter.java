@@ -3,6 +3,8 @@ package com.example.c0768448_w2020_mad3125_fp.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,12 +41,19 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsV
 
     @Override
     public int getItemCount() {
-        return 0;
+        return billListArray.size();
     }
 
     public class BillsViewHolder extends RecyclerView.ViewHolder {
+        TextView txtBillID,txtBillDate,txtBillType,txtBillAmount;
+        ImageView imgBillType;
         public BillsViewHolder(@NonNull View itemView) {
             super(itemView);
+            txtBillID = itemView.findViewById(R.id.txtBillID);
+            txtBillDate = itemView.findViewById(R.id.txtBillDate);
+            txtBillType = itemView.findViewById(R.id.txtBillType);
+            txtBillAmount = itemView.findViewById(R.id.txtBillAmount);
+            imgBillType = itemView.findViewById(R.id.imgBillType);
         }
     }
 }

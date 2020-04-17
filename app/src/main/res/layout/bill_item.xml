@@ -14,7 +14,7 @@
         android:padding="16dp">
 
         <ImageView
-            android:id="@+id/imgUser"
+            android:id="@+id/imgBillType"
             android:layout_width="94dp"
             android:layout_height="86dp"
             android:layout_marginStart="16dp"
