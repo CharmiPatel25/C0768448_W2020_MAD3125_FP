@@ -165,15 +165,15 @@ public class Customer implements Parcelable {
         return billsList;
     }
 
-   /* public double getTotalAmount()
+   public double getTotalAmount()
     {
-        double totalBilltoPay = 0.0d;
+        double custTotalAmt = 0.0d;
         for (Bill b : bills.values())
         {
-            totalBilltoPay += b.billAmount;
+            custTotalAmt += b.billAmount;
         }
-        return totalBilltoPay;
-    }*/
+        return custTotalAmt;
+    }
 
     public void addBill(Bill bill, String billId)
     {
