@@ -10,7 +10,7 @@ public enum BillType{
     String billID;
     Date billDate;
     BillType billType;
-    double billAmount;
+    double billAmount = 0.0;
 
     public Bill(String billID, Date billDate, BillType billType) {
         this.billID = billID;

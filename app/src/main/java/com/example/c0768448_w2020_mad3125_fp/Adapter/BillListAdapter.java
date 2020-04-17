@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.c0768448_w2020_mad3125_fp.R;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import com.example.c0768448_w2020_mad3125_fp.Model.Bill;
@@ -38,7 +40,9 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsV
 
     @Override
     public void onBindViewHolder(@NonNull BillListAdapter.BillsViewHolder holder, int position) {
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         Bill b = this.billListArray.get(position);
+        String strDate = dateFormat.format(b.getBillDate());
         if(b.getBillType().equals(Bill.BillType.Hydro)) {
             holder.imgBillType.setImageResource(R.drawable.hydro);
         }
@@ -50,8 +54,8 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsV
             holder.imgBillType.setImageResource(R.drawable.internet);
         }
         holder.txtBillID.setText(b.getBillID());
-        holder.txtBillAmount.setText((int) b.getBillAmount());
-        holder.txtBillDate.setText(b.getBillDate().toString());
+        holder.txtBillAmount.setText(String.format("$ " + "%,.2f", b.getBillAmount()));
+        holder.txtBillDate.setText(strDate);
         holder.txtBillType.setText(b.getBillType().toString());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

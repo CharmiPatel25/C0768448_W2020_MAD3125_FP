@@ -37,8 +37,8 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
     @Override
     public void onBindViewHolder(@NonNull CustomerViewHolder holder, int position) {
         Customer mCustomer = this.custList.get(position);
-        holder.txtFullName.setText(mCustomer.getFullName());
         holder.txtCustID.setText(mCustomer.getCustId());
+        holder.txtFullName.setText(mCustomer.getFullName());
         holder.txtEmail.setText(mCustomer.getEmailID());
         holder.txtDob.setText(mCustomer.getDateOfBirth());
         holder.txtGender.setText(mCustomer.getGender());
@@ -48,11 +48,10 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Customer customer = custList.get(position);
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("customerKey", mCustomer);
                 Intent mIntent = new Intent(holder.itemView.getContext(), ShowBillsActivity.class);
-                mIntent.putExtras(bundle);
+                mIntent.putExtra("customerKey", customer);
                 holder.itemView.getContext().startActivity(mIntent);
             }
         });
