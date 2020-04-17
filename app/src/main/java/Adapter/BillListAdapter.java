@@ -1,10 +1,13 @@
 package Adapter;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.c0768448_w2020_mad3125_fp.R;
 
 import java.util.ArrayList;
 
@@ -21,7 +24,12 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsV
     @NonNull
     @Override
     public BillListAdapter.BillsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View mView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.bill_item
+                        , parent
+                        , false);
+        BillListAdapter.BillsViewHolder mBillsViewHolder = new BillListAdapter.BillsViewHolder(mView);
+        return mBillsViewHolder;
     }
 
     @Override
