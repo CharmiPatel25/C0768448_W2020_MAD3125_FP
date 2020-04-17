@@ -191,7 +191,8 @@
                 android:text="Male"
                 android:textStyle="bold"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColorHint="#050000"/>
 
             <RadioButton
                 android:id="@+id/rdFemale"
@@ -201,6 +202,7 @@
                 android:buttonTint="#070000"
                 android:text="Female"
                 android:textStyle="bold"
+                android:textColorHint="#050000"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toStartOf="@+id/rdMale"/>
@@ -212,6 +214,7 @@
                 android:layout_marginStart="18dp"
                 android:buttonTint="#000000"
                 android:text="Others"
+                android:textColorHint="#050000"
                 android:textStyle="bold"
                 android:textColor="#000000"
                 android:textSize="18sp"

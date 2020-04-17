@@ -4,9 +4,9 @@
 
     <item
         android:id="@+id/btnAddCustomer"
-        android:title="Add Customer"
+        android:title="Add"
         app:showAsAction="always"
-        android:icon="@drawable/add"/>
+        android:icon="@drawable/addicon"/>
 
     <item
         android:id="@+id/btnLogout"

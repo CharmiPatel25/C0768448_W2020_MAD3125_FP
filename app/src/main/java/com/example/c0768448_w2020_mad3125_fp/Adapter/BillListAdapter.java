@@ -53,10 +53,10 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsV
         if(b.getBillType().equals(Bill.BillType.Internet)) {
             holder.imgBillType.setImageResource(R.drawable.internet);
         }
-        holder.txtBillID.setText(b.getBillID());
-        holder.txtBillAmount.setText(String.format("$ " + "%,.2f", b.getBillAmount()));
-        holder.txtBillDate.setText(strDate);
-        holder.txtBillType.setText(b.getBillType().toString());
+        holder.txtBillID.setText("Bill ID : "+b.getBillID());
+        holder.txtBillAmount.setText("Bill Amount : "+String.format("$ " + "%,.2f", b.getBillAmount()));
+        holder.txtBillDate.setText("Bill Date : "+strDate);
+        holder.txtBillType.setText("Bill Type : "+b.getBillType().toString());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
