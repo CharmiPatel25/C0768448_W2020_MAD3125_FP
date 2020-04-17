@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BillTypeDetailsActivity"></activity>
+        <activity android:name=".UI.BillTypeDetailsActivity"></activity>
         <activity android:name=".UI.AddNewCustomerActivity" />
         <activity android:name=".UI.ShowBillsActivity" />
         <activity android:name=".UI.CustomerListActivity" />

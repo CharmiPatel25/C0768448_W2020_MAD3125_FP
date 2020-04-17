@@ -1,4 +1,4 @@
-package Util;
+package com.example.c0768448_w2020_mad3125_fp.Util;
 
 import com.example.c0768448_w2020_mad3125_fp.R;
 
@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
-import Model.Bill;
-import Model.Customer;
-import Model.Hydro;
-import Model.Internet;
-import Model.Mobile;
+import com.example.c0768448_w2020_mad3125_fp.Model.Bill;
+import com.example.c0768448_w2020_mad3125_fp.Model.Customer;
+import com.example.c0768448_w2020_mad3125_fp.Model.Hydro;
+import com.example.c0768448_w2020_mad3125_fp.Model.Internet;
+import com.example.c0768448_w2020_mad3125_fp.Model.Mobile;
 
 public class DataStorage {
     private static DataStorage dataObj = new DataStorage();

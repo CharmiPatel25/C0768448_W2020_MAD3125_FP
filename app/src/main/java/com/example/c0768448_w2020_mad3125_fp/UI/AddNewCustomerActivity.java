@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.example.c0768448_w2020_mad3125_fp.R;
 import com.google.android.material.textfield.TextInputEditText;
@@ -21,8 +20,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Calendar;
 
-import Model.Customer;
-import Util.DataStorage;
+import com.example.c0768448_w2020_mad3125_fp.Model.Customer;
+import com.example.c0768448_w2020_mad3125_fp.Util.DataStorage;
 
 public class AddNewCustomerActivity extends AppCompatActivity {
     private TextInputLayout lblCustID, lblFirstName, lblLastName, lblBirthDate, lblEmailID;

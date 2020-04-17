@@ -1,4 +1,4 @@
-package Adapter;
+package com.example.c0768448_w2020_mad3125_fp.Adapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,7 +15,7 @@ import com.example.c0768448_w2020_mad3125_fp.UI.ShowBillsActivity;
 
 import java.util.ArrayList;
 
-import Model.Customer;
+import com.example.c0768448_w2020_mad3125_fp.Model.Customer;
 
 public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapter.CustomerViewHolder> {
 

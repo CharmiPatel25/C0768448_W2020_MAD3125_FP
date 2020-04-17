@@ -2,7 +2,6 @@ package com.example.c0768448_w2020_mad3125_fp.UI;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,14 +14,10 @@ import com.example.c0768448_w2020_mad3125_fp.R;
 
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
 
-import Adapter.CustomerListAdapter;
-import Model.Customer;
-import Util.DataStorage;
+import com.example.c0768448_w2020_mad3125_fp.Adapter.CustomerListAdapter;
 
-import static java.security.AccessController.getContext;
+import com.example.c0768448_w2020_mad3125_fp.Util.DataStorage;
 
 public class CustomerListActivity extends AppCompatActivity {
     private RecyclerView rvCustomers;

@@ -1,6 +1,5 @@
-package Adapter;
+package com.example.c0768448_w2020_mad3125_fp.Adapter;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,7 @@ import com.example.c0768448_w2020_mad3125_fp.R;
 
 import java.util.ArrayList;
 
-import Model.Bill;
+import com.example.c0768448_w2020_mad3125_fp.Model.Bill;
 
 public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsViewHolder> {
 
