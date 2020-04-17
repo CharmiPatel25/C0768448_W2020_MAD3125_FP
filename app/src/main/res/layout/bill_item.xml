@@ -29,7 +29,7 @@
             android:layout_gravity="center_vertical">
 
             <TextView
-                android:id="@+id/BillID"
+                android:id="@+id/txtBillID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
@@ -40,7 +40,18 @@
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/BillDate"
+                android:id="@+id/txtBillDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="16dp"
+                android:text="TextView"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/txtBillType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
