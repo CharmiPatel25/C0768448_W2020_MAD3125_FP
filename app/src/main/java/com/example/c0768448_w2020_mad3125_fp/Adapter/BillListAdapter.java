@@ -1,5 +1,6 @@
 package com.example.c0768448_w2020_mad3125_fp.Adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.example.c0768448_w2020_mad3125_fp.R;
 import java.util.ArrayList;
 
 import com.example.c0768448_w2020_mad3125_fp.Model.Bill;
+import com.example.c0768448_w2020_mad3125_fp.UI.BillTypeDetailsActivity;
 
 public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsViewHolder> {
 
@@ -36,7 +38,30 @@ public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsV
 
     @Override
     public void onBindViewHolder(@NonNull BillListAdapter.BillsViewHolder holder, int position) {
+        Bill b = this.billListArray.get(position);
+        if(b.getBillType().equals(Bill.BillType.Hydro)) {
+            holder.imgBillType.setImageResource(R.drawable.hydro);
+        }
+        if(b.getBillType().equals(Bill.BillType.Mobile))
+        {
+            holder.imgBillType.setImageResource(R.drawable.mobile);
+        }
+        if(b.getBillType().equals(Bill.BillType.Internet)) {
+            holder.imgBillType.setImageResource(R.drawable.internet);
+        }
+        holder.txtBillID.setText(b.getBillID());
+        holder.txtBillAmount.setText((int) b.getBillAmount());
+        holder.txtBillDate.setText(b.getBillDate().toString());
+        holder.txtBillType.setText(b.getBillType().toString());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { Bill billObj = billListArray.get(position);
+                Intent mIntent = new Intent(holder.itemView.getContext(), BillTypeDetailsActivity.class);
+                mIntent.putExtra("Bills", billObj);
+                holder.itemView.getContext().startActivity(mIntent);
+            }
+        });
     }
 
     @Override
