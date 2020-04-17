@@ -6,7 +6,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
+import Model.Bill;
+
 public class BillListAdapter extends RecyclerView.Adapter<BillListAdapter.BillsViewHolder> {
+
+    public static ArrayList<Bill> billListArray;
+
+    public BillListAdapter(ArrayList<Bill> billListArray)
+    {
+        this.billListArray = billListArray;
+    }
     @NonNull
     @Override
     public BillListAdapter.BillsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
