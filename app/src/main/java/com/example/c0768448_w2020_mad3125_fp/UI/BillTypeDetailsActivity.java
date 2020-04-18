@@ -12,6 +12,7 @@ public class BillTypeDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill_type_details);
-        getSupportActionBar().setTitle("Bill Details");
+        getSupportActionBar().setTitle("Bill Information");
+
     }
 }
