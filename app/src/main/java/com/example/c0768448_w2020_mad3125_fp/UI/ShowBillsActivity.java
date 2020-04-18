@@ -67,7 +67,7 @@ public class ShowBillsActivity extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.btnAddCustomer:
-                Intent mIntent = new Intent(ShowBillsActivity.this, BillTypeDetailsActivity.class);
+                Intent mIntent = new Intent(ShowBillsActivity.this, AddBillActivity.class);
                 mIntent.putExtra("custBillsAddNew", cust);
                 startActivity(mIntent);
 
