@@ -97,7 +97,6 @@ public class Customer implements Parcelable {
     public HashMap<String, Bill> getBills() {
         return bills;
     }
-
     public void setBills(HashMap<String, Bill> bills) {
         this.bills = bills;
     }
