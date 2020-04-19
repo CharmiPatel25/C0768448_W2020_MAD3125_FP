@@ -26,3 +26,7 @@
 Screens | Description
 --- | ---
 <img src="https://s4.gifyu.com/images/SplashScreen2788fc38f9752dc3.png" alt="SplashScreen" border="0"> | Splash screen for 5 seconds.
+<img src="https://s4.gifyu.com/images/LoginScreen.png" alt="LoginScreen" border="0"> | Login Screen
+<img src="https://s4.gifyu.com/images/LoginValidationRememberME.png" alt="LoginValidationRememberME" border="0"> | Login with validation
+<img src="https://s4.gifyu.com/images/CustomerList.png" alt="CustomerList" border="0"> | Customer List 
+
