@@ -29,4 +29,21 @@ Screens | Description
 <img src="https://s4.gifyu.com/images/LoginScreen.png" alt="LoginScreen" border="0"> | Login Screen
 <img src="https://s4.gifyu.com/images/LoginValidationRememberME.png" alt="LoginValidationRememberME" border="0"> | Login with validation
 <img src="https://s4.gifyu.com/images/CustomerList.png" alt="CustomerList" border="0"> | Customer List 
+<img src="https://s4.gifyu.com/images/AddNewCustomer1.png" alt="AddNewCustomer1" border="0"> | Add new customer
+<img src="https://s4.gifyu.com/images/AddNewCustomer2.png" alt="AddNewCustomer2" border="0"> | Add new customer
+<img src="https://s4.gifyu.com/images/AddNewCustValidation.png" alt="AddNewCustValidation" border="0"> | Add new customer validation
+<img src="https://s4.gifyu.com/images/CustomerDOBPicker.png" alt="CustomerDOBPicker" border="0"> | Date of Birth date picker
+<img src="https://s4.gifyu.com/images/NewCustomerAdded.png" alt="NewCustomerAdded" border="0"> | New Customer Added
+<img src="https://s4.gifyu.com/images/CustomerBillDetails.png" alt="CustomerBillDetails" border="0"> | Customer Bill Details with Bill Total
+<img src="https://s4.gifyu.com/images/CustomerWithNoBill.png" alt="CustomerWithNoBill" border="0"> | customer with no Bills
+<img src="https://s4.gifyu.com/images/BillTypeDetails.png" alt="BillTypeDetails" border="0"> | Detailed Bill Information
+<img src="https://s4.gifyu.com/images/AddNewBill1Spinner.png" alt="AddNewBill1Spinner" border="0"> | Add New Bill Screen for particular customer
+<img src="https://s4.gifyu.com/images/AddNewBill2.png" alt="AddNewBill2" border="0"> | Add New Bill Screen
+<img src="https://s4.gifyu.com/images/NewBillAdded.png" alt="NewBillAdded" border="0"> | New Bill added for customer and displayed with total calculated.
+<img src="https://s4.gifyu.com/images/AddNewbillValidation.png" alt="AddNewbillValidation" border="0"> | Add New Bill Validation
+
+
+
+
+
 
