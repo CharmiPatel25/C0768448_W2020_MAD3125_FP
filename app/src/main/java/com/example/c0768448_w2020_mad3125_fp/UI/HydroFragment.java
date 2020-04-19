@@ -2,12 +2,15 @@ package com.example.c0768448_w2020_mad3125_fp.UI;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.c0768448_w2020_mad3125_fp.Model.Bill;
@@ -23,7 +26,7 @@ public class HydroFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     Bill bill;
-
+    private TextView txtFragBillId, txtFragBillDate, txtAgencyName,txtUnitsConsumed,txtBillType;
     public HydroFragment() {
         // Required empty public constructor
     }
@@ -54,21 +57,22 @@ public class HydroFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     } */
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-       // return inflater.inflate(R.layout.fragment_hydro, container, false);
-        Bundle bundle = new Bundle();
-        try
-        {
-            bill = (Bill) bundle.getSerializable("hydroBill");
-        }
-        catch (NullPointerException e)
-        {
-            Toast.makeText(getActivity(), "Hydro Bill not generated", Toast.LENGTH_SHORT).show();
-        }
+
+
         return inflater.inflate(R.layout.fragment_hydro, container, false);
+
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        txtFragBillId = view.findViewById(R.id.txtFragBillId);
+        txtFragBillDate = view.findViewById(R.id.txtFragBillDate);
+        txtAgencyName = view.findViewById(R.id.txtFragAgency);
+        txtUnitsConsumed = view.findViewById(R.id.txtFragUnitsUsed);
+
+
     }
 }
