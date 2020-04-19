@@ -67,7 +67,7 @@ public class InternetFragment extends Fragment {
         Bundle bundle = new Bundle();
         try
         {
-            bill     = (Bill) bundle.getSerializable("internetObj");
+            bill     = (Bill) bundle.getSerializable("internetBill");
         }
         catch (NullPointerException e)
         {
