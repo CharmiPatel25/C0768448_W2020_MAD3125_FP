@@ -14,6 +14,9 @@ import com.example.c0768448_w2020_mad3125_fp.Model.Internet;
 import com.example.c0768448_w2020_mad3125_fp.Model.Mobile;
 import com.example.c0768448_w2020_mad3125_fp.R;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 public class BillTypeDetailsActivity extends AppCompatActivity {
     FragmentManager fm;
     FragmentTransaction ft;
@@ -35,13 +38,15 @@ public class BillTypeDetailsActivity extends AppCompatActivity {
         tv6 = findViewById(R.id.tv6);
         Intent mIntent = getIntent();
         bill = (Bill) mIntent.getSerializableExtra("Bills");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String strDate = dateFormat.format(bill.getBillDate());
 
         if (getIntent().getExtras() != null) {
             bill = (Bill) mIntent.getSerializableExtra("Bills");
             if (bill.getBillType().equals(Bill.BillType.Mobile)) {
                 mob = (Mobile) mIntent.getSerializableExtra("Bills");
                 tv5.setText("Bill ID - " + bill.getBillID());
-                tv1.setText("Bill Date - " + bill.getBillDate());
+                tv1.setText("Bill Date - " + strDate);
                 tv2.setText("Plan Name - " + mob.getPlanName());
                 tv6.setText("Manufacturer Name - " + mob.getMobileManufacturerName());
                 tv4.setText("Mobile Number - " + mob.getMobileNumber());
@@ -49,7 +54,7 @@ public class BillTypeDetailsActivity extends AppCompatActivity {
             if (bill.getBillType().equals(Bill.BillType.Hydro)) {
                 hydro = (Hydro) mIntent.getSerializableExtra("Bills");
                 tv5.setText("Bill ID - " + bill.getBillID());
-                tv1.setText("Bill Date - " + bill.getBillDate());
+                tv1.setText("Bill Date - " + strDate);
                 tv2.setText("Bill Type - " + bill.getBillType().toString());
                 tv6.setText("Agency Name - " + hydro.getAgencyName());
                 tv4.setText("Units Used - " + hydro.getUnitsConsumed());
@@ -57,7 +62,7 @@ public class BillTypeDetailsActivity extends AppCompatActivity {
             if (bill.getBillType().equals(Bill.BillType.Internet)) {
                 internet = (Internet) mIntent.getSerializableExtra("Bills");
                 tv5.setText("Bill ID - " + bill.getBillID());
-                tv1.setText("Bill Date - " + bill.getBillDate());
+                tv1.setText("Bill Date - " + strDate);
                 tv2.setText("Bill Type - " + bill.getBillType().toString());
                 tv6.setText("Internet Provider - " + internet.getInternetProviderName());
                 tv4.setText("GB Used - " + internet.getInternetGBUsed().toString());
